@@ -43,6 +43,6 @@ class MainActivity : AppCompatActivity() {
         val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
 
         //Mostramos el valor formateado en el TextView
-        binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
+        binding.tipResult.text = getString(R.string.tip_amount,formattedTip)
     }
 }
