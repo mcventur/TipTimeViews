@@ -48,6 +48,24 @@ class CalculatorClassTest {
         onView(withId(R.id.tip_result)).check(matches(withText(expectedTipText)))
     }
 
+    @Test
+    fun calculate_20_percent_round_up(){
+        onView(withId(R.id.cost_of_service_edit_text))
+            .perform(typeText("32"))
+            .perform(ViewActions.closeSoftKeyboard())
+
+        //Activamos el switch de redondeo con un click
+        onView(withId(R.id.round_up_switch)).perform(click())
+
+        onView(withId(R.id.calculate_button)).perform(click())
+
+        val expectedTip = java.text.NumberFormat.getCurrencyInstance().format(7)
+        val expectedTipText ="Tip Amount: " + expectedTip
+        onView(withId(R.id.tip_result)).check(matches(withText(expectedTipText)))
+
+
+    }
+
 
 
 }
