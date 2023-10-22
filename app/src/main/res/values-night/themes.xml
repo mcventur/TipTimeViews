@@ -3,5 +3,8 @@
     <style name="Base.Theme.TipTimeViews" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+        <item name="radioButtonStyle">@style/Widget.TipTimeViews.CompoundButton.RadioButton</item>
+        <item name="switchStyle">@style/Widget.TipTimeViews.CompoundButton.Switch</item>
     </style>
 </resources>

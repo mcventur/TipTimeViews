@@ -23,7 +23,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun calculateTip() {
         //Recogemos el coste, y el porcentaje de propina de la IU
-        val cost = binding.costOfService.text.toString().toDouble()
+        val costString = binding.costOfServiceEditText.text.toString()
+        val cost = costString?.toDoubleOrNull() ?: 0.0
         val selectedId = binding.tipOptions.checkedRadioButtonId
         val tipPercentage = when(selectedId){
             R.id.option_twenty_percent -> 0.20
